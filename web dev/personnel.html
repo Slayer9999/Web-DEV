@@ -1,0 +1,1184 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.3.0/css/all.min.css">
+    <script src="jquery-3.6.3.min.js"></script>
+    <style>
+        body {
+            margin: 0px;
+            width: 100%;
+            overflow-x: hidden;
+
+        }
+
+        .main {
+            background-color: azure;
+            height: 760px;
+            margin-top: -8px;
+            width: 100%;
+            overflow: hidden;
+
+        }
+
+        .navbar {
+            position: fixed;
+
+            width: 100%;
+            margin: auto;
+            margin-left: 0px;
+            padding-top: 10px;
+            height: 60px;
+            margin-top: 0px;
+            z-index: 1;
+
+        }
+
+        li {
+            float: left;
+            list-style-type: none;
+            margin-left: 30px;
+            font-size: 20px;
+
+            cursor: pointer;
+            font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+            color: BLACK;
+
+            transition: all 0.4s;
+            margin-top: -5px;
+        }
+
+
+        li:hover {
+            color: burlywood;
+        }
+
+        .text {
+            color: BLACK;
+            font-size: large;
+            margin-top: 300px;
+            float: left;
+            margin-left: 30px;
+            font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+            font-weight: 300;
+        }
+
+
+
+        .typing {
+            float: left;
+            margin-top: 325px;
+            background-color: azure;
+            width: 420px;
+            height: 50px;
+            margin-left: -410px;
+            border-left: solid black;
+
+            animation: type steps(30) infinite 4s;
+        }
+
+        @keyframes type {
+
+            to {
+                margin-left: 0px;
+            }
+        }
+
+        h3 {
+            font-weight: 100;
+        }
+
+        .web {
+            margin-top: -20px;
+        }
+
+        .image1 {
+            width: 33%;
+            float: right;
+            margin-top: 200px;
+            margin-right: 20px;
+        }
+
+        .about,
+        .Services {
+
+            height: 600px;
+            background: rgb(0.8, 0.1, 0.9, 0.8)url('aboutback.jpg');
+            margin-top: -20px;
+            background-attachment: fixed;
+            width: 100%;
+
+            background-position: center;
+            background-size: cover;
+            background-blend-mode: darken;
+            color: whitesmoke;
+            overflow: hidden;
+
+        }
+
+        .about_text,
+        .service_text {
+            font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+            text-align: center;
+            padding-top: 70px;
+            text-decoration: underline;
+
+
+        }
+
+        .web_about {
+            font-size: large;
+            font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+            font-weight: 300;
+
+            text-align: center;
+        }
+
+
+
+        .flex1 {
+            display: flex;
+            justify-content: space-evenly;
+            margin: auto;
+            width: 100%;
+            margin-top: 0px;
+
+
+        }
+
+        .child_flex1,
+        #child_flex2 {
+            height: 230px;
+            width: 230px;
+            background: rgb(0.8, 0.1, 0.7, 0.6)url('co1.jpg');
+            background-position: center;
+            background-size: cover;
+            background-blend-mode: darken;
+            border-radius: 7px;
+            color: white;
+            font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+            text-align: center;
+            border: white 2px solid;
+
+        }
+
+        #child_flex2 {
+            background: rgb(0.8, 0.1, 0.7, 0.6)url('co.jpg');
+            background-position: center;
+            background-size: cover;
+            background-blend-mode: darken;
+        }
+
+        h2 {
+            padding-top: 80px;
+        }
+
+        .Services {
+            background: rgb(0.8, 0.1, 0.9, 0.6)url('back.jpg');
+            margin-top: -8px;
+            background-attachment: fixed;
+            color: white;
+            height: 700px;
+            overflow: hidden;
+            background-position: center;
+            background-size: cover;
+            background-blend-mode: darken;
+        }
+
+        .service_text {
+            padding-top: 40px;
+            font-weight: 500;
+            text-decoration: none;
+
+        }
+
+        .child_services {
+            height: 300px;
+            width: 300px;
+
+            border-radius: 10px;
+            border: solid white 2px;
+            background: url('webc.jpg');
+            background-position: center;
+            background-size: cover;
+            
+            text-align: center;
+            margin-top: 300px;
+            cursor: pointer;
+            z-index: 0;
+
+        }
+
+        .child_services:hover {
+            transform: scale(1.05);
+        }
+
+        .flex_services {
+            display: flex;
+            width: 100%;
+            justify-content: space-evenly;
+            flex-wrap: wrap;
+             padding-bottom: 100px;
+            margin: auto;
+            margin-top: 100px;
+
+        }
+
+        .ser {
+            font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+            font-weight: 600;
+            font-size: large;
+            background-color: whitesmoke;
+            height: 40px;
+            margin-top: 260px;
+            border-bottom-right-radius: 10px;
+            border-bottom-left-radius: 10px;
+            text-align: center;
+            padding-top: 0px;
+            color: black;
+
+        }
+
+        .footer,
+        .mainfooter,
+        .childfooter {
+            height: 500px;
+            width: 100%;
+
+            background-color: azure;
+            overflow: hidden;
+
+        }
+
+        .mainfooter {
+            background-image: linear-gradient(#2A5470, #4C4177);
+            height: 400px;
+            margin-top: 150px;
+        }
+
+        .childfooter {
+            background-image: linear-gradient(#6E45E1, #89D4CF);
+            height: 150px;
+            margin-top: -480px;
+            width: 80%;
+            margin-left: 140px;
+            border-radius: 5px;
+            color: white;
+
+
+        }
+
+        .footerflex {
+            display: flex;
+            width: 40%;
+            margin-left: -10px;
+            margin-top: -30px;
+            justify-content: space-evenly;
+
+        }
+
+        h4 {
+            font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+            font-weight: 400;
+            color: white;
+
+        }
+
+        .signup {
+            float: right;
+            margin-top: -120px;
+            margin-right: 50px;
+            border-radius: 25px;
+            background-color: #2A5470;
+
+            cursor: pointer;
+            transition: 0.4s all;
+            color: white;
+            border: none;
+            width: 150px;
+        }
+
+        .signup:hover {
+            background-color: #5F0A87;
+            color: whitesmoke;
+        }
+
+
+
+        .hello {
+            list-style-type: none;
+            float: none;
+            font-size: 15px;
+            color: white;
+
+        }
+
+        .contactflex {
+            display: flex;
+            margin-top: 100px;
+            align-self: center;
+            width: 90%;
+            justify-content: space-evenly;
+        }
+
+        #hell {
+            font-weight: 900;
+            color: white;
+
+        }
+
+        #hell:hover,
+        #hel:hover {
+            color: white;
+            cursor: default;
+
+        }
+
+        .icons {
+            font-size: 25px;
+            color: white;
+        }
+
+        .email {
+            background-color: rgb(0.8, 0.1, 0.7, 0.7);
+            height: 1000px;
+            width: 100%;
+            position: fixed;
+            z-index: 4;
+            margin-top: -2700px;
+
+            display: flex;
+            justify-content: space-evenly;
+            visibility: hidden;
+        }
+
+        .form {
+
+            width: 500px;
+            height: 500px;
+
+            background-color: rgba(179, 10, 179, 0.6);
+            margin-top: 200px;
+            border-radius: 7px;
+            box-shadow: 0px 4px 8px 5px rgba(255, 255, 255, 0.2), 0px 5px 10px 5px rgba(255, 253, 253, 0.1);
+
+
+        }
+
+        .login {
+            color: white;
+            font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+            font-weight: 700;
+            font-size: 40px;
+            margin-left: 190px;
+
+        }
+
+        input {
+            margin-left: 50px;
+            width: 400px;
+            height: 40px;
+            font-size: large;
+            border-bottom: 0.5px solid;
+            border-top: none;
+            border-right: none;
+            border-left: none;
+            background-color: transparent;
+            color: white;
+            border-color: white;
+
+        }
+
+        ::placeholder {
+            color: white
+        }
+
+        .fogot {
+            color: white;
+            font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+            font-weight: 500;
+            margin-left: 350px;
+            cursor: pointer;
+        }
+
+        .log {
+            color: white;
+            font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+            background-color: transparent;
+            border: white 1px solid;
+            width: 200px;
+            border-radius: 10px;
+            height: 30px;
+            font-size: large;
+            margin-left: 150px;
+            cursor: pointer;
+            transition: 0.6s all;
+        }
+
+        .log:hover {
+            background-color: white;
+            color: black;
+        }
+
+        .close {
+            float: right;
+            margin-top: -320px;
+            background-color: transparent;
+            color: white;
+            font-size: 20px;
+            margin-right: 3px;
+            cursor: pointer;
+            transition: 0.3s all;
+            border: none;
+        }
+
+        .close:hover {
+            color: red;
+        }
+
+        .options {
+            color: white;
+            margin-left: 200px;
+            font-weight: 300;
+            font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+
+        }
+
+        #twi,
+        #brand,
+        #band {
+            color: white;
+            font-size: 30px;
+            margin-left: 50px;
+            transition: 0.4 all;
+            cursor: pointer;
+
+        }
+
+        #brand {
+            margin-left: 160px;
+        }
+
+        #twi:hover,
+        #brand:hover,
+        #band:hover {
+            color: bisque;
+
+        }
+
+        .sidebar {
+            float: left;
+            position: fixed;
+            margin-top: 30px;
+            margin-left: 20px;
+            background-color: transparent;
+            font-size: 30px;
+            border: 0px;
+            visibility: hidden;
+            z-index: 3;
+            cursor: pointer;
+
+
+
+
+        }
+
+        .rocket {
+            width: 10%;
+            float: left;
+            margin-left: -1000px;
+            position: absolute;
+            z-index: 2;
+            margin-top: -10px;
+        }
+
+        .jk {
+            width: 250px;
+            overflow: hidden;
+            float: right;
+            margin-top: -20px;
+
+            height: 60px;
+
+
+
+
+
+
+        }
+
+        .img {
+            width: 230px;
+            margin-top: -60px;
+
+
+        }
+
+        @media(max-width:800px) {
+            .nav {
+                display: none;
+            }
+
+
+            .navbar {
+                display: flex;
+                padding-top: 30px;
+                justify-content: center;
+            }
+
+            .about_text {
+                padding-top: 0px;
+            }
+        }
+
+        @media(max-width:1300px) {
+            .image1 {
+                display: none;
+            }
+
+            .typing {
+                display: none;
+            }
+
+            .text {
+                display: flex;
+                width: 100%;
+                flex-direction: column;
+                align-items: center;
+               
+                margin: 0px;
+                margin-top: 300px;
+               
+            }
+
+            
+
+            .childfooter {
+                margin: auto;
+            }
+
+        }
+
+        @media(max-width:650px) {
+            .child_services {
+                border: 3px solid black;
+            }
+
+            .hello {
+                font-size: 12px;
+            }
+
+            .icons {
+                font-size: 15px;
+            }
+
+            #hell {
+                font-size: 12px;
+            }
+
+            .contactflex {
+                align-self: center;
+            }
+        }
+
+        @media(max-width:680px) {
+            .signup {
+                margin-right: 130px;
+                margin-top: -80px;
+
+            }
+        }
+
+        .sidemenu {
+            background-color: lightseagreen;
+            width: 180px;
+            height: 1000px;
+            padding-top: 200px;
+            position: fixed;
+            margin-left: -200px;
+           
+            
+           
+
+
+        }
+
+        .nav1 {
+            list-style-type: none;
+            float: none;
+            color: black;
+            width: 30px;
+
+
+
+        }
+
+        .menu {
+            margin-left: -40px;
+            padding-top: 40px;
+        }
+
+        @media(min-width:800px) and (max-width:20000px) {
+            .sidemenu {
+                background-color: transparent;
+            }
+
+            .menu {
+                display: none;
+            }
+            .mainsidemenu{
+                display: none;
+            }
+
+        }
+        .mainsidemenu{
+            width: 101%;
+            height: 1000px;
+            background-color: rgb(0.8, 0.1, 0.7, 0.6);
+            position: fixed;
+            margin-top: -2600px;
+            z-index: 2;
+            visibility: hidden;
+            float: left;
+        }
+        @media(max-width:1290px){
+           
+            .child_services{
+                margin: 10px;
+                
+               
+            }
+            .Services{
+                height: 950px;
+            }
+            .mainsidemenu{
+                margin-top: -2900px;
+            }
+            .email{
+                margin-top: -2950px;
+            }
+        }
+        @media(max-width:650px){
+            .Services{
+                height: 1600px ;
+            }
+            .mainsidemenu{
+                margin-top: -3550px;
+            }
+            .email{
+                margin-top: -3600px;
+            }
+        }
+        
+       
+    </style>
+</head>
+
+<body>
+    <div class="main">
+        <button class="sidebar" id="sidebar"><i class="fas fa-bars"></i></button>
+        <div class="navbar">
+
+            <ul class="hell">
+
+                <li class="nav" id="home"><a>Home</a></li>
+                <li class="nav" id="about"><a>About</a></li>
+                <li class="nav" id="services"><a>Services</a></li>
+                <li class="nav" id="projects"><a>Contact US</a></li>
+
+            </ul>
+            <div class="jk"><img class="img" src="sl.png" alt=""></div>
+            <img src="fla.png" class='rocket' alt="">
+
+        </div>
+
+
+        <div class="text">
+            <h1 id="talent">My Name Is Faizan Ali</h1>
+            <h3 class='web'>Iam a Software Engineer and a Web Developer</h3>
+
+        </div>
+        <div class="typing"></div>
+        <img src="backgroundimage.svg" class="image1" alt="">
+
+    </div>
+    
+    <div class="about">
+        <h1 class="about_text">About Us</h1>
+        <p class="web_about">We give your online presence a meaning,It's our owner to help you out
+            in enhancing your buisness through online world we give our full
+            effort to fulfill your idea and make you feel comfortable working online
+            through our simple and unique web designs.You can trust on us for being your partener
+            in your journey to the vast world of internet so we can face all the problems together
+            and find their solutions together . We give your ambitions a life to live.
+
+        </p>
+
+        <div class="flex1">
+            <div class="child_flex1">
+                <h2>Trust</h2>
+            </div>
+            <div class="child_flex1" id="child_flex2">
+                <h2>Hard Work</h2>
+            </div>
+        </div>
+    </div>
+    <div class="Services">
+        <h1 class="service_text">Our Features and Services</h1>
+        <br />
+        <hr style="width:25%;height: 3px;background-color: white;border: none;">
+        <div class="flex_services">
+            <div class="child_services">
+                <h3 class="ser">Full Stack Web Development</h3>
+            </div>
+            <div class="child_services"
+                style="background:url('data.jpg');background-size: cover;background-position: center;">
+                <h3 class='ser'>Managing Data and opinions</h3>
+            </div>
+            <div class="child_services"
+                style="background:url('sofware.png');background-size: cover;background-position: center;">
+                <h3 class="ser">Custom Software Development</h3>
+            </div>
+            <div class="child_services"
+                style="background:url('app.png');background-size: cover;background-position: center;">
+                <h3 class="ser">Mobile and Web Apllications</h3>
+            </div>
+        </div>
+    </div>
+
+    <div class="footer">
+        <div class="mainfooter">
+
+            <div class="contactflex">
+                <ul>
+                    <li class="hello" id="hell">
+                        Contact Us:
+                    </li>
+                    <br />
+                    <br />
+                    <a href="mailto:faizanean344@gmail.com" style="text-decoration: none;">
+                        <li class="hello">
+                            Email : faizanean344@gmail.com
+                        </li>
+                    </a>
+                    <br />
+                    <li class='hello'>
+                        Phone : 03009666304
+                    </li>
+                </ul>
+                <ul>
+                    <li class="hello" id="hell">
+                        Address:
+                    </li>
+                    <br />
+                    <br />
+                    <li id="hel" class="hello">
+                        ISLAMABAD,HOSTEL CITY
+                        <br>
+                        ,PARK ROAD,TARLAI KALAN
+                    </li>
+
+                </ul>
+                <ul>
+                    <li id="hell">
+                        LINKS:
+                    </li>
+                    <br />
+                    <br />
+                    <li class="icons">
+                        <i class="fa-brands fa-facebook"></i>
+                    </li>
+                    <br />
+                    <li class="icons">
+                        <i class="fa-brands fa-twitter"></i>
+                    </li>
+                    <br />
+                    <a href="https://github.com/Slayer9999/Web-DEV">
+                        <li class="icons">
+                            <i class="fa-brands fa-github"></i>
+                        </li>
+                    </a>
+                </ul>
+            </div>
+        </div>
+        <div class="childfooter">
+            <h1 style="font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;font-weight: 300;margin-top: 30px;margin-left: 20px;"
+                id="get">
+                Get Our Services Today</h1>
+            <div class="footerflex">
+                <div class="childfooterflex">
+                    <pre><h4>Free Maintenence</h4>       <i class="fa-solid fa-check"></i></pre>
+
+                </div>
+                <div class="childfooterflex">
+                    <pre><h4>Full Satisfaction</h4>       <i class="fa-solid fa-check"></i></pre>
+
+                </div>
+                <div class="childfooterflex">
+                    <pre><h4>Ontime</h4>  <i class="fa-solid fa-check"></i></pre>
+
+                </div>
+
+
+            </div>
+            <button class="signup" id="sign">
+                <h4>Signup For FREE</h4>
+            </button>
+
+        </div>
+    </div>
+    <div class="email">
+        <div class="form">
+            <h1 class="login">
+                Login
+            </h1>
+            <br />
+            <br />
+            <br />
+            <input type="email" placeholder="Email">
+            <br />
+            <br />
+            <input type="password" placeholder="Password">
+            <h5 class="fogot">Forgot Password ?</h5>
+            <button class="log" id="login" type="submit
+            ">LOGIN</button>
+            <button class="close" id="clos">x</button>
+            <h4 class="options">Or Sign Up Using</h4>
+            <br />
+            <i id="brand" class="fa-brands fa-facebook"></i>
+            <i id="band" class="fa-brands fa-google"></i>
+            <i id='twi' class="fa-brands fa-twitter"></i>
+        </div>
+    </div>
+
+    <div class="mainsidemenu">
+        <div class="sidemenu" id="sidemenu">
+            <ul class="menu">
+                <li class="nav1" id="ho">Home</li>
+                <br>
+                <br>
+                <li class="nav1" id="ab">About</li>
+                <br>
+                <br>
+                <li class="nav1" id="so">Services</li>
+                <br>
+                <br>
+                <li class="nav1" id="con" style="width:101px">Contact US</li>
+            </ul>
+        </div>
+    </div>
+</body>
+
+<script>
+
+    window.onscroll = function () { nav(), b(), flex(), footer() }
+    function nav() {
+        if (document.body.scrollTop > 50 || document.documentElement.scrollTop > 50) {
+            let h = document.getElementsByClassName('navbar')
+            let h1 = document.querySelectorAll('.nav')
+            h[0].style.backgroundColor = "lightblue"
+            h[0].style.boxShadow = ' 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19)'
+            h[0].style.position = 'fixed'
+            h[0].style.transition = 'all 0.4s'
+        }
+        else {
+            let h = document.getElementsByClassName('navbar')
+            let h1 = document.querySelectorAll('.nav')
+            h[0].style.backgroundColor = 'transparent'
+            h[0].style.boxShadow = 'none'
+            h[0].style.position = 'fixed'
+            h[0].style.transition = 'all 0.4s'
+
+        }
+    }
+    about.addEventListener('click', () => {
+        window.scroll({
+            top: 700,
+            behavior: 'smooth'
+        })
+
+    })
+    ab.addEventListener('click', () => {
+        window.scroll({
+            top: 700,
+            behavior: 'smooth'
+        })
+        logo()
+
+
+    })
+    home.addEventListener('click', () => {
+        window.scroll({
+            top: 0,
+            behavior: 'smooth'
+        })
+    })
+    ho.addEventListener('click', () => {
+        window.scroll({
+            top: 0,
+            behavior: 'smooth'
+
+        })
+        logo()
+    })
+    let serv = document.getElementsByClassName('child_services')
+    services.addEventListener('click', () => {
+        window.scroll({
+            top: 1300,
+            behavior: 'smooth'
+
+        })
+
+    })
+    so.addEventListener('click', () => {
+        window.scroll({
+            top: 1300,
+            behavior: 'smooth'
+
+        })
+        logo()
+
+    })
+    function b() {
+        if (document.body.scrollTop > 800 || document.documentElement.scrollTop > 800) {
+            serv[0].style.marginTop = '0px'
+            serv[1].style.marginTop = '0px'
+            serv[2].style.marginTop = '0px'
+            serv[3].style.marginTop = '0px'
+            serv[0].style.transition = 'all 0.5s'
+            serv[1].style.transition = 'all 0.5s'
+            serv[2].style.transition = 'all 0.5s'
+            serv[3].style.transition = 'all 0.5s'
+        }
+        else {
+            serv[0].style.marginTop = '300px'
+            serv[1].style.marginTop = '300px'
+            serv[2].style.marginTop = '300px'
+            serv[3].style.marginTop = '300px'
+        }
+    }
+    projects.addEventListener('click', () => {
+        window.scroll({
+            top: 4000,
+            behavior: 'smooth'
+        })
+
+    })
+    con.addEventListener('click', () => {
+        window.scroll({
+            top: 4000,
+            behavior: 'smooth'
+        })
+        logo()
+     
+    })
+    function flex() {
+        let fl = document.getElementsByClassName('child_flex1')
+        if (document.body.scrollTop > 230 || document.documentElement.scrollTop > 230) {
+            fl[0].style.marginLeft = '0px'
+            fl[0].style.transition = 'all 0.5s'
+
+
+        }
+        else {
+            fl[0].style.marginLeft = '500px'
+
+
+
+
+        }
+    }
+
+    sign.addEventListener('click', () => {
+        let si = document.getElementsByClassName('email')
+        si[0].style.visibility = 'visible'
+
+
+
+
+    })
+    clos.addEventListener('click', () => {
+        let si = document.getElementsByClassName('email')
+
+        si[0].style.visibility = 'hidden'
+
+
+
+
+    })
+    login.addEventListener('click', () => {
+        let si = document.getElementsByClassName('email')
+
+        si[0].style.visibility = 'hidden'
+
+    })
+    function footer() {
+        let foo = document.getElementsByClassName('childfooter')
+        if (document.body.scrollTop > 1100 || document.documentElement.scrollTop > 1100) {
+            foo[0].style.marginTop = '-480px'
+            foo[0].style.transition = 'all 0.5s'
+
+
+        }
+        else {
+            foo[0].style.marginTop = '-200px'
+
+
+
+
+        }
+    }
+    let tal = document.getElementById('talent')
+    tale1 = () => {
+        tal.innerHTML = 'My Name Is Faizan Ali'
+
+    }
+    tale = () => {
+
+        tal.innerHTML = 'A Passionate Developer'
+    }
+
+
+    let int = setInterval(tale, 4000)
+    let int1 = setInterval(tale1, 8000)
+    window.onload = function ro() { roc() }
+    function roc() {
+        let rock = document.getElementsByClassName('rocket')
+        rock[0].style.marginLeft = '1700px'
+        rock[0].style.transition = 'all 20s'
+    }
+    window.addEventListener('load', () => {
+        if (window.innerWidth < 800) {
+            let side = document.getElementsByClassName('sidebar')
+            side[0].style.visibility = 'visible'
+
+
+
+
+
+
+        }
+        else {
+            let side = document.getElementsByClassName('sidebar')
+            side[0].style.visibility = 'hidden'
+
+
+
+
+
+
+        }
+
+    })
+    window.addEventListener('resize', () => {
+        if (window.innerWidth < 800) {
+            let side = document.getElementsByClassName('sidebar')
+            
+
+            side[0].style.visibility = 'visible'
+
+
+
+
+
+        }
+
+        else {
+            let side = document.getElementsByClassName('sidebar')
+
+            side[0].style.visibility = 'hidden'
+
+
+
+
+        }
+    })
+    window.addEventListener('load', () => {
+        if (window.innerWidth < 1100) {
+            let chill = document.getElementsByClassName('footerflex')
+            chill[0].style.visibility = 'hidden'
+            let get = document.getElementById('get')
+            get.style.marginTop = '40px'
+
+
+        }
+        else {
+            let chill = document.getElementsByClassName('footerflex')
+            chill[0].style.visibility = 'visible'
+            let t = document.getElementById('get')
+            get.style.marginTop = '30px'
+
+        }
+
+    })
+    window.addEventListener('resize', () => {
+        if (window.innerWidth < 1100) {
+            let chill = document.getElementsByClassName('footerflex')
+            let get = document.getElementById('get')
+            chill[0].style.visibility = 'hidden'
+            get.style.marginTop = '40px'
+
+
+
+
+        }
+
+        else {
+            let chill = document.getElementsByClassName('footerflex')
+            let get = document.getElementById('get')
+            chill[0].style.visibility = 'visible'
+            get.style.marginTop = '30px'
+
+
+
+        }
+    })
+    const faizanbar = document.getElementById('sidebar').innerHTML
+    function complete() {
+        x = 0
+        sidebar.addEventListener('click', () => {
+            x = x + 1
+            if (x % 2 == 0) {
+                let sidenav = document.getElementsByClassName('mainsidemenu')
+                let cross_word = document.getElementById('sidebar')
+                cross_word.innerHTML = faizanbar
+                sidenav[0].style.visibility = 'hidden'
+                sidenav[0].style.transition = 'all 0.1s'
+                document.getElementById('sidemenu').style.marginLeft='-200px'
+        document.getElementById('sidemenu').style.transition='all 0.5s'
+
+
+            }
+            else {
+                let sidenav = document.getElementsByClassName('mainsidemenu')
+                let cross_word = document.getElementById('sidebar')
+                cross_word.innerHTML = 'X'
+                sidenav[0].style.visibility = 'visible'
+                
+                document.getElementById('sidemenu').style.marginLeft='0px'
+        document.getElementById('sidemenu').style.transition='all 0.5s'
+
+            }
+        })
+    }
+    complete()
+    function logo() {
+        let sidenav = document.getElementsByClassName('mainsidemenu')
+        let cross_word = document.getElementById('sidebar')
+        cross_word.innerHTML = faizanbar
+        sidenav[0].style.visibility = 'hidden'
+        document.getElementById('sidemenu').style.marginLeft='-200px'
+        document.getElementById('sidemenu').style.transition='all 0.5s'
+        if (x % 2 != 0) {
+            x = x + 1
+        }
+    }
+
+</script>
+
+
+</html>

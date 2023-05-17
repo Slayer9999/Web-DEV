@@ -1,0 +1,587 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.3.0/css/all.min.css">
+    <title>Document</title>
+<style>
+    *{
+        box-sizing: border-box;
+        margin: 0px;
+        padding: 0px;
+    }
+    .main{
+        background: rgb(0.8, 0.1, 0.9, 0.4)url('brwon.jpg');
+        background-position: center;
+        background-size: cover;
+        width: 100%;
+        height: 657px;
+        background-blend-mode: darken;
+        padding-top: 30px;
+        color: white;
+        text-align: center;
+        
+    }
+    .nav{
+        background-color: white;
+        color: black;
+        width: 90%;
+        margin: auto;
+        height: 120px;
+        border-radius: 3px;        
+    }
+    .us{
+        padding-top: 10px;
+        margin-left: -1000px;
+        
+    }
+    hr{
+        color: grey;
+        margin: auto;
+        width: 95%;
+    }
+    .btn{
+        background-color: black;
+        color: white;
+        font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+        height: 40px;
+        width: 80px;
+        font-size: medium;
+        border: none;
+        border-radius: 5px;
+        float: right;
+        margin-top: -30px;
+        margin-right: 140px;
+        transition:0.5s all;
+        cursor: pointer;
+    }
+    .btn:hover{
+        color: black;
+        background-color: white;
+        border: black solid 0.5px;
+    }
+   #search ,#bar{
+        float: right;
+        margin-right: 80px;
+        margin-top: -20px;
+        font-size: large;
+        
+    }
+    #bar{
+        margin-right: 30px;
+    }
+    li{
+        list-style-type: none;
+        float: left;
+        margin-left:50px;
+        margin-top: 20px;
+        font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+        font-size: 13px;
+        transition:0.5 all;
+        cursor: pointer;
+    }
+    .first{
+        margin-left:50px;
+    }
+    .text,.text1{
+        text-align: center;
+        width: 10%;
+        float: left;
+        margin-top: 20px;
+        font-size: 10px;
+        margin-left: 40px;
+        
+    }
+    #f,#t{
+        float: right;
+        margin-right: 30px;
+        margin-top: 20px;
+        
+    }
+    li:hover{
+        
+        color: brown;
+    }
+    .btn_2{
+        border: none;
+        color: white;
+        background-color: #125681;
+        height: 40px;
+        width: 150px;
+        border-radius: 2px;
+        transition:0.5s all;
+    }
+    .btn_2:hover{
+        border: solid black 0.5ps;
+        color: black;
+        background-color: white;
+        cursor: pointer;
+    }
+    .flex{
+        display: flex;
+        justify-content: space-between;
+        width: 100%;
+        margin-top: 100px;
+        margin-left: -60px;
+        
+
+    }
+    .child{
+        width: 30%;
+        margin-left: -100px;
+        
+    }
+    .childflex{
+        width: 100%;
+    }
+    .tex{
+        margin-left:-220px;
+        font-size: 10px;
+        font-weight: 100;
+        font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+
+    }
+    p
+    {
+        text-align: left;
+        font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+        font-weight: 200;
+    }
+    .attractions{
+        width: 100%;
+        height: 500px;
+        padding-top:100px;
+        padding: 60px;
+    }
+    .p1{
+        width: 30%;
+    }
+    .flex2{
+        display: flex;
+        justify-content: space-evenly;
+        float: right;
+        width: 70%;
+        margin-top:-200px
+    }
+    .childflex2{
+        height: 250px;
+        width: 230px;
+        
+        color: white;
+        padding-left: 20px;
+        padding-top: 180px;
+        
+       
+    }
+    h5{
+        color: rgb(245, 229, 229);
+    }
+    .tours{
+        height: 600px;
+        width: 100%;
+        background-color:rgb(245, 235, 235) ;
+        text-align: center;
+        font-weight: 200;
+        padding-top: 70px;
+    }
+    pre{
+        font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+        font-size: 20px;
+        
+    }
+    .flex3{
+        display: flex;
+        width: 100%;
+        justify-content: space-evenly;
+    }
+    .childflex3{
+        width: 20%;
+
+    }
+    img{
+        width: 100%;
+    }
+    .fall{
+        font-size: 40px;
+        font-weight: 500;
+        font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    }
+    .jp{
+        width: 50%;
+        float: right;
+        margin-top: -400px;
+        height: 350px;
+        margin-right: 50px;
+    }
+    .contact{
+        text-align: center;
+        height: 350px;
+        background-color:rgb(245, 235, 235) ;
+        padding-top:50px;
+
+    }
+    .stay{
+        font-size: 40px;
+        font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+        font-weight: 500;
+
+    }
+    .para{
+        text-align: center;
+        font-size: 20px;
+        font-weight:normal;
+        color: grey;
+        width:50%;
+        margin: auto;
+        
+    }
+    input,.submit{
+        width: 70%;
+        height: 50px;
+        border-radius: 5px;
+        border: solid lightgray 0.5px;
+        padding-left: 10px;
+
+    }
+    ::placeholder{
+        font-size: 15px;
+        
+
+    }
+    .submit{
+        margin-top: 10px;
+        background-color: #125681;
+        color: white;
+        cursor: pointer;
+        transition: 0.5s all;
+        
+    }
+    .submit:hover{
+        background-color:white;
+        color:black;
+        border: solid black 0.5px;
+    }
+    .footer{
+        background-color: rgb(21, 19, 19);
+        height:500px;
+        color: white;
+        padding-top: 50px;
+        font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    }
+    .no{
+        margin-left: 20px;
+            }
+   .text1{
+    margin-left:150px;
+   }
+   .support{
+    margin-left: 35px;
+   }
+   .under{
+    width: 90%;
+    margin: auto;
+    margin-top: 100px;
+   }
+   .hello{
+    float: none;
+    cursor: pointer;
+   }
+   .hello:hover{
+    color: white;
+    text-decoration: underline;
+   }
+   
+   .footerflex{
+    width: 80%;
+    display: flex;
+    justify-content: space-evenly;
+    margin: auto;
+   }
+   
+</style>
+</head>
+<body>
+    <div class="main">
+      <div class="nav">
+        <b><h2 class="us">U.S .Regions</h2></b>
+        <i class="fas fa-bars" id="bar"></i>
+        <i class="fa-solid fa-magnifying-glass" id="search"></i>
+        <button class="btn">Donate</button>
+        <br>
+        <hr>
+          <div class="text">
+           
+                <p>
+                    Lorem ipsum dolor sit amet, consectetur adipisicing 
+                </p>
+            
+          </div>
+        <ul class="lis">
+            <li>
+               <h3 class="first">Westeren</h3> 
+            </li>
+            <li>
+                <h3>Central</h3> 
+             </li>
+             <li>
+                <h3>Southeren</h3> 
+             </li>
+             <li>
+                <h3>Northeast</h3> 
+             </li>
+             <li>
+                <h3>Blog</h3> 
+             </li>
+             <li>
+                <h3>Explorer Magazine</h3> 
+             </li>
+        </ul>
+        <div class="text">
+           
+            <p>
+                Support us by funding
+                on Social Media 
+            </p>
+        
+      </div>
+      <i class="fa-brands fa-twitter" id="t"></i>
+      <i class="fa-brands fa-facebook-f" id="f"></i>
+       
+        
+      </div>
+     <h2 style="margin-top: 100px; font-weight:lighter;">Westeren Region</h2>
+     <h1 style="font-size: 100px;">COLORADO</h1>
+     <button class="btn_2">Explore More</button>
+     <div class="flex">
+        <div class="childflex"><img class="child" src="red.jpg" alt=""></div>
+        <div class="tex"><p><b>Red Rocks Amphlitheatre</b> is a rock structure near Morrison, Colorado, 10 miles west of Derver</p>
+        
+        Read more</div>
+        <div class="childflex"><img class="child" src="moutain.jpeg" alt=""></div>
+        <div class="tex"><p><b>Rocky Mountains Nationnal Park</b> in northern Colorado spans the Continental Divide and encompasses</p>
+            
+            Read more</div>
+        <div class="childflex"><img class="child" src="lake.jpeg" alt=""></div>
+        <div class="tex"><p><b>Pikes Peak</b> is the highest summit of the southern Front Range of the Rocky Mountains, in North America</p>
+        
+        Read more</div>
+     </div>
+    </div>
+    <div class="attractions">
+        <h1>Attractions</h1>
+        <br>
+        <p class="p1">
+            Compile a list of Colorado's top attractions and things to do, and your Colorado  vvacationn itinerary is practically built for you.
+             How many of these attrations can you fit in one Colorado trip?
+        </p>
+        <br>
+        <br>
+        <br>
+        <h3>See all attractions</h3>
+        <hr style="background-color:blue;height:5px;border:none;width: 150px;margin-left:0px">
+        <div class="flex2">
+            <div class="childflex2" style="background: rgb(0.8, 0.1, 0.5, 0.3)url('chef.jpeg');
+            background-blend-mode: darken;background-position: center;
+        background-size: cover;
+        background-repeat: no-repeat;">
+               <h4>CULINARY ACTIVITIES</h4>
+               <br>
+               <h5>Read more</h5>
+            </div>
+            <div class="childflex2" style="background: rgb(0.8, 0.1, 0.5, 0.3)url('tourist.jpeg');
+            background-blend-mode: darken;background-position: center;
+        background-size: cover;
+        background-repeat: no-repeat;">
+                <h4>ARCHEOLOGICAL</h4>
+                <br>
+                <h5>Read more</h5>
+            </div>
+            <div class="childflex2" style=" background: rgb(0.8, 0.1, 0.5, 0.3)url('balloon.jpeg');
+            background-blend-mode: darken;background-position: center;
+        background-size: cover;
+        background-repeat: no-repeat;">
+                <h4>BALLOONING</h4>
+                <br>
+                <h5>Read more</h5>
+            </div>
+        </div>
+    </div>
+    <div class="tours">
+        <h1>Colorado Tours</h1>
+        <br>
+        <pre>
+            From gold mines to wineries, factoreis to breweries, national parks to
+            museums and historical sites, you'll find great sightseeing attractions
+        to tour all across Colorado
+        </pre>
+        <div class="flex3">
+            <div class="childflex3">
+             <img src="lake.jpeg" alt="">
+             <br>
+             <h3>Tour Planner</h3>
+             <br>
+             <p>Our online tour planner platform allows you to layer your own markers,text,paths,and other media with a vairty of pre-deisghned data layer. No mapping experience required.</p>
+            </div>
+            <div class="childflex3">
+                <img src="moutain.jpeg" alt="">
+                <br>
+                <h3>Detailed Maps</h3>
+                <br>
+                <p>Print single-shet maps of any part of Colorade, prarks or entirestate. Add or remover lables and features to test your Colorado geographic knowledge.</p>
+            </div>
+            <div class="childflex3">
+                <img src="red.jpg" alt="">
+                <br>
+                <h3>State of Colorado</h3>
+                <br>
+                <p>Download print and assem le large-scale maps of the world. continents, and the Unites Statess.Kits offer students the opprotunity to work wwith mapping concepts at a variety of scales and to see the world in new ways.</p>
+            </div>
+
+        </div>
+    </div>
+    <div class='attractions'>
+        <pre><h1 class="fall">Fall Farm
+ACTIVITIES
+in Colorado
+        </h1></pre>
+        <p class="p1">
+            When harvest season news, Colorado's farms swing open their gates for fail fun in the fields, Load up the whole family for wallet-friendsly learnin',pickin'and eatin'-all the whle supporinit local growers and businesses. 
+        </p>
+        <br>
+        <h3>Learn More</h3>
+        <hr style="background-color:blue;height:5px;border:none;width: 100px;margin-left:0px">
+        <div>
+            <img src="lake.jpeg"  class="jp" alt="">
+        </div>
+    </div>
+    <div class="contact">
+        <h1 class="stay">Stay in Touch</h1>
+        <p class="para">
+            Sign up for our newsletter to get the latest classroom resources and program accouncements each month
+        </p>
+        <br>
+        <input type="email" placeholder="Email Adress">
+        <button type="submit" class="submit">Submit</button>
+    </div>
+    <div class="footer">
+        
+            <b><h2 class="no" >U.S .Regions</h2></b>
+            
+            
+            
+              <div class="text">
+               
+                    <p>
+                        Lorem ipsum dolor sit amet, consectetur adipisicing 
+                    </p>
+                
+              </div>
+            <ul class="lis">
+                <li>
+                   <h3 class="first">Westeren</h3> 
+                </li>
+                <li>
+                    <h3>Central</h3> 
+                 </li>
+                 <li>
+                    <h3>Southeren</h3> 
+                 </li>
+                 <li>
+                    <h3>Northeast</h3> 
+                 </li>
+                 <li>
+                    <h3>Blog</h3> 
+                 </li>
+                 <li>
+                    <h3>Explorer Magazine</h3> 
+                 </li>
+            </ul>
+            <div class="text1">
+               
+                <p class="support">
+                    Support us by funding
+                    on Social Media 
+                </p>
+            
+          </div>
+          <i class="fa-brands fa-twitter" id="t"></i>
+          <i class="fa-brands fa-facebook-f" id="f"></i>
+          <br>
+          <br> 
+          <hr class="under"> 
+          <div class="footerflex">
+            <ul >
+                <li class="hello">
+                Industry Partners
+                </li>
+                <li class="hello">
+                Welcome Centers    
+                </li>
+                <li class="hello">
+                    Meetings Professionals
+                </li>
+                <li class="hello">
+                    Tour Groups
+                </li>
+                <li class="hello">
+                    Order a Guide
+                </li>
+            </ul>
+            <ul >
+                <li class="hello">
+                    Visitor Information
+                    </li>
+                    <li class="hello">
+                    Welcome Host   
+                    </li>
+                    <li class="hello">
+                    Visitor Directory
+                    </li>
+                    <li class="hello">
+                    Social Channels
+                    </li>
+                    <li class="hello">
+                     Media Room
+                    </li>
+            </ul>
+            <ul >
+                <li class="hello">
+                    Attractions
+                    </li>
+                    <li class="hello">
+                    Online Magazine   
+                    </li>
+                    <li  class="hello">
+                        Day Tours
+                    </li>
+                    <li class="hello">
+                        Exhibitions
+                    </li>
+                    <li class="hello">
+                        Trip Materials
+                    </li>
+            </ul>
+            <ul >
+                <li class="hello">
+                    Contact Us
+                    </li>
+                    <li class="hello">
+                    Link To Us   
+                    </li>
+                    <li class="hello">
+                        Support
+                    </li>
+                    <li class="hello">
+                        Privacy Policy
+                    </li>
+                    <li class="hello">
+                        Sitemap
+                    </li>
+            </ul>
+          </div>
+          </div>
+   
+</body>
+</html>

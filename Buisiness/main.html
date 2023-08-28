@@ -1,0 +1,473 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <link rel="stylesheet" href="main.css">
+  <script src="https://cdn.emailjs.com/dist/email.min.js"></script>
+
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css
+
+
+
+    ">
+    <script type="text/javascript"
+        src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js">
+</script>
+<script type="text/javascript">
+  (function(){
+     emailjs.init("YMiq8jNRbwWj4Emi6");
+  })();
+</script>
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css">
+  <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js"
+    integrity="sha384-I7E8VVD/ismYTF4hNIPjVp/Zjvgyol6VFvRkX/vR+Vc4jQkC+hVqc2pM8ODewa9r"
+    crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.min.js"
+    integrity="sha384-fbbOQedDUMZZ5KreZpsbe1LCZPVmfTnH7ois6mU1QK+m14rQ1l2bGBq41eYeM/fS"
+    crossorigin="anonymous"></script>
+</head>
+
+<body>
+   <!-- Modal for loading -->
+ <div id="Modal2"style="display:none;position: fixed;z-index: 110;width: 100%;height:100%;background-color:rgba(0.9,0.9,0.8,0.7);background-blend-mode:darken;">
+  <div  style="height:300px; border-radius:50px;background-color: white;border: 1px solid black;text-align: center  ; margin:auto;width: 50%;padding: 30px;margin-top: 100px;">
+    <div class="Cont">
+      <h1>Sending your Messege</h1>
+      <hr>
+       <img src="images/VideoAndGifs/sending.gif"style="margin-top:-100px;" alt="">
+      <br>
+     </div>
+  </div>
+ </div>
+<!-- End of the modal -->
+  <!-- Modal after form submission -->
+ <div id="Modal"style="display:none;position: fixed;z-index: 110;width: 100%;height:100%;background-color:rgba(0.9,0.9,0.8,0.7);background-blend-mode:darken;">
+  <div  style=" border-radius:50px;background-color: white;border: 1px solid black;text-align: center  ; margin:auto;width: 80%;padding: 30px;margin-top: 100px;">
+    <div class="Cont">
+      <h1>Thanks for Contacting Us !</h1>
+      <hr>
+      <br>
+      <h3>
+        Your form has been Submitted Successfully
+      </h3>
+        <!-- <img src="done.gif" > -->
+        <video src="images/VideoAndGifs/sent.mp4" width="100px" autoplay loop muted></video>
+        <br>
+        <button class="btn btn-primary ok" style="width: 100px;">OK</button>
+    </div>
+  </div>
+ </div>
+<!-- End of the modal -->
+ <!-- Modal if error in form-->
+ <div id="Modal1"style="display:none;position: fixed;z-index: 110;width: 100%;height:100%;background-color:rgba(0.9,0.9,0.8,0.7);background-blend-mode:darken;">
+  <div  style=" border-radius:50px;background-color: lightblue;border: 1px solid black;text-align: center  ; margin:auto;width: 60%;padding: 30px;margin-top: 100px;">
+    <div class="Cont">
+      <h1>Error</h1>
+      <hr>
+      <br>
+      <h3>
+        Error submitting the form
+      </h3>
+        <!-- <img src="done.gif" > -->
+        <video src="images/VideoAndGifs/error.mp4" style="mix-blend-mode: color-burn;" width="200px" autoplay loop muted></video>
+        <br>
+        <button class="btn btn-primary ok"  style="width: 100px;">OK</button>
+    </div>
+  </div>
+ </div>
+<!-- End of the modal -->
+  <mainContent>
+    <div class="sidebar">
+      <h1>HAIDER <span class="color">TRADERS</span></h1>
+      <ul>
+        <li class="Home" ><a ><img src="images/LOGO/home.png" class="push" alt="">Home<i class="fa fa-angle-right"></i></a><span
+            class="hover "></span>
+        </li>
+        <li class="Abou"><a><img src="images/LOGO/AboutUs.png" class="push" alt="">About<i class="fa fa-angle-right"></i></a><span
+            class="hover" ></span>
+
+        </li>
+        <li class="Pro"><a ><img src="images/LOGO/products.png" class="push" alt="">Products<i class="fa fa-angle-right"></i></a><span
+            class="hover" ></span>
+        </li>
+        <li class="Clien"><a ><img src="images/LOGO/case.png" class="push" alt="">Clients<i class="fa fa-angle-right"></i></a><span
+            class="hover" ></span>
+
+        </li>
+        <li class="Contac"><a ><img src="images/LOGO/ContactUs.png" class="push" alt="">ContactUs<i class="fa fa-angle-right"></i></a><span
+            class="hover "></span>
+
+        </li>
+
+      </ul>
+    </div>
+
+    <nav>
+      <div class="navigation">
+        <div class="logo">
+          <img src="images/LOGO/cover.png" alt="">
+        </div>
+        <div class="pages">
+          <a class="Home">Home</a>
+          <a class="Abou">About</a>
+          <a class="Pro">Products</a>
+          <a class="Clien">Clients</a>
+          <a class="Contac">Contact</a>
+          <div id="si" class="bars clickable-bar" data-clicked="0">
+            <span class="bar-1"></span>
+            <span class="bar-2"></span>
+            <span class="bar-3"></span>
+          </div>
+        </div>
+      </div>
+    </nav>
+    <div class="main" >
+      <div class="content">
+        <div class="Writing">
+          <div class="main1">
+            <div class="main2" id="up">
+              <span id="top" class="to">HAIDER <span class="color">TRADERS</span></span>
+              <br>
+              <h5 id="under" class="un">Unlock the Power of Barcode Labels: Streamline Efficiency,
+                Enhance Tracking,<br> and Boost Productivity!We care about the environment! Our barcode <br>
+                rolls are made from eco-friendly materials, reducing our impact on nature.</h5>
+            </div>
+          </div>
+          <button id="btn" class="btn-1">Learn More</button>
+        </div>
+
+        <img class="img" style="margin-top: -70px;" id="img" src="images/Products/role.png" alt="">
+        <div class="animate">
+
+        </div>
+        <div class="animate2">
+
+        </div>
+      </div>
+    </div>
+
+    <div class="AboutUs" >
+      <div class="About">
+        <div class="write">
+          <div class="text">
+            <span class="undertext"><span class="Ab">About</span><br>
+              <span class="Haider"> HAIDER</span> <span class="color">TRADERS</span>
+            </span>
+          </div>
+        </div>
+        <div class="colabflex">
+          <div class="colab">
+
+          </div>
+        </div>
+
+      </div>
+      <div class="Context">
+        <div class="flex">
+          <div class="box">
+            <div class="hover-point"></div>
+            <div class="hover-point"></div>
+            <div class="hover-point"></div>
+            <div class="hover-point"></div>
+            <div class="hover-point"></div>
+            <div class="hover-point"></div>
+            <div class="hover-point"></div>
+            <div class="hover-point"></div>
+            <div class="box-contents">
+              <h4><b>Who Are We ?</b></h4>
+              <p>Welcome to Haider Traders, Faisalabad's premier destination for all your barcode ribbon and thermal
+                transfer roll needs. With an unwavering commitment to excellence, we have solidified our position as the
+                city's largest and most trusted supplier in this domain. Our extensive range of products caters to a
+                diverse clientele, ranging from small businesses to large industrial enterprises, all seeking top-notch
+                quality and reliability.</p>
+            </div>
+
+          </div>
+          <div class="box">
+            <div class="hover-point"></div>
+            <div class="hover-point"></div>
+            <div class="hover-point"></div>
+            <div class="hover-point"></div>
+            <div class="hover-point"></div>
+            <div class="hover-point"></div>
+            <div class="hover-point"></div>
+            <div class="hover-point"></div>
+            <div class="box-contents">
+              <h4><b>Why Choose Haider Traders for Cutting-Edge Solutions?</b></h4>
+              <p> At Haider Traders, our success stems from a deep-rooted passion for innovation and customer
+                satisfaction. We take pride in staying at the forefront of technology, continuously updating our
+                offerings to meet the evolving needs of our valued customers. Our team of experts works tirelessly to
+                understand your unique requirements, ensuring that we provide tailor-made solutions that enhance your
+                operational efficiency.</p>
+            </div>
+
+          </div>
+          <div class="box">
+            <div class="hover-point"></div>
+            <div class="hover-point"></div>
+            <div class="hover-point"></div>
+            <div class="hover-point"></div>
+            <div class="hover-point"></div>
+            <div class="hover-point"></div>
+            <div class="hover-point"></div>
+            <div class="hover-point"></div>
+            <div class="box-contents">
+              <h4><b>How Does Our Customer-Centric Approach Set Us Apart?</b></h4>
+              <p> As pioneers in the industry, we are not just about delivering products; we are about building enduring
+                partnerships. With an unwavering focus on customer-centricity, we strive to create an unmatched
+                experience for each client. When you choose Haider Traders, you are choosing a trusted ally that is
+                dedicated to your success. We invite you to explore our About Us page to learn more about our remarkable
+                journey and the principles that define our foundation.</p>
+            </div>
+          </div>
+
+        </div>
+      </div>
+
+    </div>
+  
+    <div class="Product" >
+      <header class="product-header">
+        <div class="animation">
+          <div class="header-content">
+            <h1 class="product-title">Discover Our Premium Collection</h1>
+            <p class="product-description">Explore a curated selection of high-quality products crafted to perfection.
+            </p>
+
+          </div>
+        </div>
+      </header>
+      <br>
+      <br>
+      <div class="container">
+        <div class="product-card">
+          <div class="product-image">
+            <img width="100%" src="images/Products/ribbon4.png">
+          </div>
+          <div class="product-details">
+            <h1>Thermal Ribbon</h1>
+            <p>We provide a complete selection of thermal transfer ribbons, including Wax, Wax/Resin, Resin, and Washcare Resin types. We ensure you top quality products</p>
+            <button type="button" class="btn">Buy Now</button>
+          </div>
+        </div>
+
+        <div class="product-card">
+          <div class="product-details">
+            <h1>Thermal Paper</h1>
+            <p>
+              At our company, we specialize in offering custom-sized thermal transfer paper, ensuring the highest quality standards.</p>
+            <button type="button" class="btn">Buy Now</button>
+          </div>
+          <div class="product-image">
+            <img width="100%" src="images/Products/role.png">
+          </div>
+        </div>
+        <div class="product-card">
+          <div class="product-image">
+            <img width="100%" src=".png">
+          </div>
+          <div class="product-details">
+            <h1>Product title</h1>
+            <p>Great product title for a great product and all of the extra things a product might need to make it fill
+              an entire card.</p>
+            <button type="button" class="btn">Buy Now</button>
+          </div>
+        </div>
+        <div class="product-card">
+          <div class="product-image">
+            <img width="100%" src="images/Products/Lable.png">
+          </div>
+          <div class="product-details">
+            <h1>Thermal Label</h1>
+            <p>Experience custom thermal transfer labels in customized sizes, backed by our commitment to top quality. Our premium transfer paper guarantees superb printing results.</p>
+            <button type="button" class="btn">Buy Now</button>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="clients" id="Clients">
+      <header class="header1">
+        <h1 class="satisfied-heading">Our Satisfied Clients</h1>
+        <div class="decoration-line"></div>
+        <br>
+        <div class="Clients">
+          <img loading="lazy" class="filter" src="images/clientspng/ai.png" alt="">
+          <img loading="lazy" class="filter" src="images/clientspng/mk.png" alt="">
+          <img loading="lazy" class="filter" src="images/clientspng/sadaqat.png" alt="">
+          <img loading="lazy" class="filter" src="images/clientspng/bis.png" alt="">
+          <img loading="lazy" class="filter" src="images/clientspng/alpha.png" alt="">
+          <img loading="lazy" class="filter" src="images/clientspng/arzoo.png" alt="">
+          <img loading="lazy" class="filter" src="images/clientspng/magna.png" alt="">
+          <img loading="lazy" class="filter" src="images/clientspng/Kamal.png" alt="">
+          <img loading="lazy" class="filter" src="images/clientspng/Sticky (1).png" alt="">
+
+        </div>
+      </header>
+    </div>
+    <section  id="con" class="contact-page-sec">
+      <div class="container">
+        <div class="row">
+          <div class="col-md-4">
+            <div class="contact-info">
+              <div class="contact-info-item">
+                <div class="contact-info-icon">
+                  <i class="fas fa-map-marked"></i>
+                </div>
+                <div class="contact-info-text">
+                  <h2>address</h2>
+                  <span>AminPur Bazar,Zain-Ul-Abdin-Plaza </span>
+                  <span>Faisalabad , Pakistan</span>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="col-md-4">
+            <div class="contact-info">
+              <div class="contact-info-item">
+                <div class="contact-info-icon">
+                  <i class="fas fa-envelope"></i>
+                </div>
+                <div class="contact-info-text">
+                  <h2>E-mail</h2>
+                  <span>faizandev666@gmail.com</span>
+                  <span>ehsanfaizan@yahoo.com</span>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="col-md-4">
+            <div class="contact-info">
+              <div class="contact-info-item">
+                <div class="contact-info-icon">
+                  <i class="fas fa-clock"></i>
+                </div>
+                <div class="contact-info-text">
+                  <h2>office time</h2>
+                  <span>Mon - Thu 9:00 am - 4.00 pm</span>
+                  <span>Thu - Mon 10.00 pm - 5.00 pm</span>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-4 hello">
+          <h2> FOLLOW US ON </h2>
+          <div class="flex1">
+            <img class="filter" src="images/LOGO/facebook.png" alt="">
+            <img class="filter" src="images/LOGO/instagram.png" alt="">
+            <img class="filter" src="images/LOGO/twitter.png" alt="">
+            <img class="filter" src="images/LOGO/linkedin.png" alt="">
+          </div>
+        </div>
+
+
+        <div class="row">
+          <div class="col-md-8">
+            <div class="contact-page-form" >
+              <h2>Contact Us</h2>
+              <form  onsubmit="SendMail(event)"  >
+                <div class="row">
+                  <div class="col-md-6 col-sm-6 col-xs-12">
+                    <div class="single-input-field">
+                      <input type="text" placeholder="Your Name" id="name" name="name" />
+                    </div>
+                  </div>
+                  <div class="col-md-6 col-sm-6 col-xs-12">
+                    <div class="single-input-field">
+                      <input type="email" placeholder="E-mail" id="email" name="email" required />
+                    </div>
+                  </div>
+                  <div class="col-md-6 col-sm-6 col-xs-12">
+                    <div class="single-input-field">
+                      <input type="number" placeholder="Phone Number"id="Phone" name="phone" />
+                    </div>
+                  </div>
+                  <div class="col-md-6 col-sm-6 col-xs-12">
+                    <div class="single-input-field">
+                      <input type="text" placeholder="Subject" id="Subject" name="subject" />
+                    </div>
+                  </div>
+                  <div class="col-md-12 message-input">
+                    <div class="single-input-field">
+                      <textarea placeholder="Write Your Message" id="messege" name="message"></textarea>
+                    </div>
+                  </div>
+                  <div class="single-input-fieldsbtn">
+                    <input id="send" value="Send Now" type="submit" />
+                  </div>
+                </div>
+              </form>
+            </div>
+          </div>
+          <div class="col-md-4">
+            <div class="contact-page-map" id="iframe-container">
+              <iframe
+                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3404.7691122985375!2d73.07445107476615!3d31.420486852071637!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x392243a3a1473b2d%3A0x5251cd75ac3b9858!2zTWFya2F6aSBNYXNqaWQgQWhsZS1IYWRlZXMg2YXYsdqp2LLbjCDYrNin2YXYuSDZhdiz2KzYryDYp9uB2YTYrdiv24zYqyDYp9mF24zZhiDZvtmI2LEg2KjYp9iy2KfYsQ!5e0!3m2!1sen!2s!4v1692700036956!5m2!1sen!2s"
+                width="100%" height="450" frameborder="0" style="border:0" allowfullscreen></iframe>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+  </mainContent>
+
+
+</body>
+<script src="JS/jquery-3.6.3.min.js"></script>
+
+<script>
+function SendMail(event) {
+  event.preventDefault(); // Prevent the default form submission behavior
+
+  let params = {
+    name: document.getElementById('name').value,
+    email: document.getElementById('email').value,
+    phone: document.getElementById('Phone').value,
+    subject: document.getElementById('Subject').value,
+    messege: document.getElementById('messege').value,
+  };
+  $('#Modal2').fadeIn()
+  const ServiceId = "service_mx18ysw";
+  const TemplateId = "template_0rzgwm5";
+
+  emailjs
+    .send(ServiceId, TemplateId, params)
+    .then((res) => {
+      document.getElementById('name').value = "";
+      document.getElementById('email').value = "";
+      document.getElementById('Phone').value = "";
+      document.getElementById('Subject').value = "";
+      document.getElementById('messege').value = "";
+
+      $('#Modal').fadeIn()
+      $('#Modal2').fadeOut()
+    })
+    .catch((err) => {
+      document.getElementById('name').value = "";
+      document.getElementById('email').value = "";
+      document.getElementById('Phone').value = "";
+      document.getElementById('Subject').value = "";
+      document.getElementById('messege').value = "";
+      $('#Modal2').fadeOut()
+      $('#Modal1').fadeIn()
+      console.log(err)});
+}
+let ok=document.getElementsByClassName('ok')
+ok[0].addEventListener('click',()=>{
+  $('#Modal').fadeOut()
+  
+})
+ok[1].addEventListener('click',()=>{
+  $('#Modal1').fadeOut()
+  
+})
+</script>
+<script src="JS/main.js"></script>
+
+
+
+
+</html>

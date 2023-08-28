@@ -1,0 +1,191 @@
+#nav {
+    position: fixed;
+    width: 100%;
+    top: 0;
+    z-index: 100;
+    transition: 0.5s all;
+    
+  
+  }
+  .navcolor{
+    background-color: rgba(0.8,0.8,0.5,0.8);
+  }
+  
+  #navContent {
+  
+  
+    
+    padding: 30px;
+    display: flex;
+    width: 90%;
+    margin: auto;
+    font-family: 'Varela';
+  
+  
+  }
+  
+  .navIcons {
+    width: 40% !important;
+    margin-left: 70px;
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+  
+  
+  
+  
+  }
+  a{
+    color: #edf5e1;
+    text-decoration: none;
+  }
+  .ChildNavIcon {
+    text-decoration: none;
+    position: relative;
+    cursor: pointer;
+    font-size: 17px;
+    font-weight: 500;
+    color: #edf5e1;
+    transition: 0.5s all;
+  
+  
+  }
+  
+  .ChildNavIcon::before {
+    content: "";
+    position: absolute;
+    bottom: -5px;
+    left: 0;
+    width: 0;
+  
+    height: 2px;
+    background-color: #edf5e1;
+    transition: width 0.3s ease-in-out;
+  }
+  
+  .ChildNavIcon:hover::before {
+    width: 100%;
+  }
+  
+  .LoginAndCart {
+    margin-left: auto;
+    display: flex;
+    justify-content: space-between;
+    width: 170px;
+  }
+  .shopping{
+    font-size: 20px;
+  }
+  .icon {
+    color: #053868;
+    font-size: 30px !important;
+    position: relative;
+  }
+  
+  .Badge {
+    position: absolute;
+    top: -8px;
+    right: -8px;
+    background-color: #edf5e1;
+    color: #053868;
+    border-radius: 50%;
+    padding: 2px 6px;
+    font-size: 12px;
+  }
+  
+  .btn {
+  
+    text-align: center;
+    height: 40px;
+    width: 100px;
+    background-color: #053868;
+    color: #edf5e1;
+    font-size: 20px;
+    border: none;
+    border-radius: 10px;
+    cursor: pointer;
+    transition: 0.5s all;
+  }
+  
+  .btn:hover {
+    background-color: #edf5e1;
+    color: #053868;
+  }
+  
+  .Rotate {
+    transition: transform 0.3s ease-in-out;
+  }
+  
+  .Cat:hover .Rotate {
+    transform: rotate(180deg);
+  }
+  
+  /* Dropdown Categories*/
+  .Cat {
+    position: relative;
+  }
+  
+  .Drop {
+    transform: scale(0);
+    position: absolute;
+    top: 100%;
+    left: 0;
+    background-color: #053868;
+    color: #edf5e1;
+    width: 150px;
+  
+    font-family: 'Varela';
+    cursor: default;
+    transition: 0.3s all;
+    text-align: center;
+  }
+  
+  .Cat:hover .Drop {
+    transform: scale(1);
+  
+  }
+  
+  .Drop ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+  
+  }
+  
+  .Drop li {
+  
+    height: 50px;
+    padding-top: 12px;
+    position: relative;
+    cursor: pointer;
+    width: auto;
+    display: flex;
+    justify-content: center;
+    transition: 0.5s all;
+  
+  }
+  
+  .Drop hr {
+    height: 0.5px;
+    background-color: grey;
+    border: none;
+  
+  }
+  
+  .Drop li:hover {
+    background-color: #062f55;
+  
+  }
+ 
+.active-link::before {
+  content: "";
+  position: absolute;
+  bottom: -5px;
+  left: 0;
+  width: 0;
+
+  height: 2px;
+  background-color: #edf5e1;
+  width:100%
+}
+

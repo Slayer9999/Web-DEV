@@ -1,0 +1,166 @@
+@import url('https://fonts.googleapis.com/css?family=Roboto:400,500,700');
+*
+{
+    -webkit-box-sizing: border-box;
+            box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+
+body
+{
+    font-family: 'Roboto', sans-serif;
+    background-color:#0C0C11;
+}
+/*  */
+
+.product-header {
+    background: url('/Media/images/desktop-wallpaper-gaming-pc-gaming-for-pc-novocom-top.jpg') rgba(0.8, 0.8, 0.8, 0.1);
+    background-size: cover;
+    background-position: center;
+    background-blend-mode: darken;
+    background-attachment: fixed;
+    text-align: center;
+    color: #fff;
+    padding: 150px 0;
+    overflow: hidden;
+    height: 450px;
+  }
+  
+  .header-content {
+    max-width: 600px;
+    margin: auto;
+   margin-top: 300px;
+    transition: 1s all;
+    
+  }
+  .header-content1{
+    margin-top: 0px;
+   
+    
+  }
+
+  
+header  h1 {
+    font-size: 50px;
+    margin-bottom: 20px;
+  }
+  
+  p {
+    font-size: 20px;
+    margin-bottom: 30px;
+    
+  }
+
+/*  */
+a
+{
+    text-decoration: none;
+}
+.product-card {
+    width: 380px;
+    position: relative;
+    
+    margin: 50px auto;
+    background: black;
+}
+
+
+
+.product-tumb {
+    
+    
+    height: 200px;
+    margin-top: -50px;
+    overflow: hidden;
+  
+   
+}
+
+.product-tumb img {
+    width: 100%;
+    
+    
+}
+
+.product-details {
+    padding: 30px;
+    width: 100%;
+    word-wrap: break-word;
+}
+
+.product-catagory {
+    display: block;
+    font-size: 12px;
+    font-weight: 700;
+    text-transform: uppercase;
+    color: #ccc;
+    margin-bottom: 18px;
+}
+
+.product-details h4 a {
+    font-weight: 500;
+    display: block;
+    margin-bottom: 18px;
+    text-transform: uppercase;
+    color: #363636;
+    text-decoration: none;
+    transition: 0.3s;
+}
+
+.product-details h4 a:hover {
+    color: #fbb72c;
+}
+
+.product-details p {
+    font-size: 15px;
+    line-height: 22px;
+    margin-bottom: 18px;
+    color: #999;
+}
+
+.product-bottom-details {
+    overflow: hidden;
+    border-top: 1px solid #eee;
+    padding-top: 20px;
+}
+
+.product-bottom-details div {
+    float: left;
+    width: 50%;
+}
+
+.product-price {
+    font-size: 18px;
+    color: green;
+    font-weight: 600;
+}
+
+.product-price small {
+    font-size: 80%;
+    font-weight: 400;
+    text-decoration: line-through;
+    display: inline-block;
+    margin-right: 5px;
+}
+
+.product-links {
+    text-align: right;
+}
+
+.product-links a {
+    display: inline-block;
+    margin-left: 5px;
+    color: #e1e1e1;
+    transition: 0.3s;
+    font-size: 17px;
+}
+
+.product-links a:hover {
+    color: #fbb72c;
+}
+.Flex{
+    display: flex;
+    flex-wrap: wrap;
+}

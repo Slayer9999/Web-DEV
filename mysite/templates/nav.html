@@ -1,0 +1,27 @@
+<div id="nav">
+  <div id="navContent">
+    <div class="logo" style="color: #edf5e1;">
+      <h1>logo</h1>
+    </div>
+    <div class="navIcons">
+      <a class="ChildNavIcon {% if request.path == '/' %}active-link{% endif %}" href="{% url 'Home' %}">Home</a>
+      <div class="ChildNavIcon Cat">Categories
+        <i class="fa-solid fa-angle-down Rotate"></i>
+        <div class="Drop">
+          <ul>
+            {% for a in Data %}
+            <a class="category-link" href="{% url 'category_view' category_id=a.id %}"><li>{{a.CatName}}</li></a>
+            <hr>
+            {% endfor %}
+          </ul>
+        </div>
+      </div>
+      <a class="ChildNavIcon" href="#">About</a>
+      <a class="ChildNavIcon" href="#">Contact Us</a>
+    </div>
+    <div class="LoginAndCart">
+      <button class="btn">Login</button>
+      <a href=""><i class="fa fa-shopping-cart icon"><span class="Badge">0</span></i></a>
+    </div>
+  </div>
+</div>

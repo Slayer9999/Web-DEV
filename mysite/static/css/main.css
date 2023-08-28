@@ -1,0 +1,350 @@
+* {
+  padding: 0px;
+  margin: 0px;
+  box-sizing: border-box;
+  /* font-family: sans-serif; */
+}
+
+body {
+  width: 100%;
+  height: 100%;
+  background-color: #0C0C11;
+  overflow-x: hidden;
+}
+.HomeBack{
+  background-image:url('/Media/images/amazing.jpg'); /* Your desired background color */
+  background-position: center;
+  background-size:cover;
+ position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%; /* Cover the entire width of the viewport */
+ 
+}
+
+
+/* Home Page */
+.HomePage {
+
+  margin: auto;
+  padding: 20px;
+  display: flex;
+
+  margin-top: 140px;
+  overflow: hidden;
+  width: 90%;
+  align-items: center;
+  justify-content: space-between;
+
+}
+
+.image {
+  width: 700px;
+  opacity: 0;
+  margin-top: 10px;
+  transition: 1s all;
+  filter: drop-shadow(5px 5px 10px #888888);
+  animation: moveUpDown 3s ease infinite;
+
+
+}
+
+@keyframes moveUpDown {
+
+  0%,
+  100% {
+    transform: translateY(0);
+    /* Starting and ending position */
+  }
+
+  50% {
+    transform: translateY(-20px);
+    /* Middle position - move up by 5px */
+  }
+}
+
+
+.Text {
+  width: 450px;
+  font-size: 70px;
+  color: #edf5e1;
+  font-weight: 700;
+  font-family: 'Orbitron';
+
+  margin-top: 20px;
+  opacity: 0;
+  transition: 1s all;
+}
+
+.Text1 {
+  margin-top: 0px;
+  opacity: 1;
+}
+
+.image1 {
+  opacity: 1;
+  margin-top: 0px;
+}
+
+/* Slider */
+.MostPopular,
+.Suggested {
+  margin-top: 100px;
+  color: #edf5e1;
+  text-align: center;
+  font-size: 60px;
+  font-weight: 700;
+  font-family: sans-serif;
+
+}
+
+
+#main,
+#main2 {
+  
+  width: 100%;
+  margin-top: 20px;
+
+  padding: 50px;
+ 
+  background-position: center;
+  background-size: cover;
+  /* position: relative; */
+
+}
+
+.swiper {
+  width: 95%;
+  padding-top: 50px;
+  padding-bottom: 50px;
+  height: 450px;
+  
+}
+
+.mySwiper .swiper-slide {
+  background-position: center;
+  background-size: cover;
+ 
+  width: 380px !important;
+
+  
+  overflow: hidden;
+  cursor: pointer;
+  
+}
+.product-card {
+  width: 380px;
+  position: relative;
+  height: 450px;
+  margin: 50px auto;
+  background: black;
+  font-family: sans-serif;
+}
+
+
+
+.product-tumb {
+  
+  
+  height: 200px;
+  margin-top: -50px;
+  overflow: hidden;
+  
+ 
+}
+
+.product-tumb img {
+  width: 100%;
+  
+  
+  
+}
+
+.product-details {
+  padding: 30px;
+  width: 100%;
+  word-wrap: break-word;
+}
+
+.product-catagory {
+  display: block;
+  font-size: 12px;
+  font-weight: 700;
+  text-transform: uppercase;
+  color: #ccc;
+  margin-bottom: 18px;
+}
+
+.product-details h4 a {
+  font-weight: 500;
+  display: block;
+  margin-bottom: 18px;
+  text-transform: uppercase;
+  color: #363636;
+  text-decoration: none;
+  transition: 0.3s;
+}
+
+.product-details h4 a:hover {
+  color: #fbb72c;
+}
+
+.product-details p {
+  font-size: 15px;
+  line-height: 22px;
+  margin-bottom: 18px;
+  color: #999;
+}
+
+.product-bottom-details {
+  overflow: hidden;
+  border-top: 1px solid #eee;
+  padding-top: 20px;
+}
+
+.product-bottom-details div {
+  float: left;
+  width: 50%;
+}
+
+.product-price {
+  font-size: 18px;
+  color: green;
+  font-weight: 600;
+}
+
+.product-price small {
+  font-size: 80%;
+  font-weight: 400;
+  text-decoration: line-through;
+  display: inline-block;
+  margin-right: 5px;
+}
+
+.product-links {
+  text-align: right;
+}
+
+.product-links a {
+  display: inline-block;
+  margin-left: 5px;
+  color: #e1e1e1;
+  transition: 0.3s;
+  font-size: 17px;
+}
+
+.product-links a:hover {
+  color: #fbb72c;
+}
+
+.sliderFlex{
+  display: flex;
+  margin: auto;
+  margin-top:10px;
+  align-items: center;
+  justify-content: space-evenly;
+  flex-direction: column;
+  font-family: sans-serif;
+  color: #edf5e1;
+  
+}
+
+
+
+
+.underLine {
+  width: 10%;
+  background-color: #084680;
+  height: 3px;
+  border: none;
+  margin: auto;
+  margin-top: 5px;
+}
+
+/* Example styling for the next and previous buttons */
+  
+
+/* Products */
+
+.ProductMain{
+  margin-top: 700px;
+  color: #edf5e1;
+  text-align: center;
+  font-size: 50px;
+  font-family: sans-serif;
+}
+.Child_Product{
+  display: flex;
+  justify-content: space-evenly;
+  flex-wrap: wrap;
+
+}
+.MainChild{
+  height: 350px;
+  margin-bottom: 40px;
+  text-align: left;
+  font-family: sans-serif;
+}
+.Child{
+  width: 350px;
+  height: 250px;
+  border: none;
+  overflow:hidden;
+  margin-bottom: 20px;
+  
+}
+
+.ProductImage{
+  width: 100%;
+  transition: 0.5s all;
+  cursor: pointer;
+
+}
+.ProductImage:hover{
+  transform: scale(1.5);
+
+}
+.ProductExplore{
+  font-size:20px;
+  
+}
+/* Marquee */
+.sliding{
+  margin-top: 50px;
+   font-size: 200px;
+   color:#7A4FF4;;
+   font-family: sans-serif;
+   font-weight: 700;
+   
+
+}
+.SmallAbout{
+  width: 100%;
+  display: flex;
+  margin-top:70px;
+  justify-content: space-evenly;
+  flex-wrap: wrap;
+  font-family: sans-serif;
+}
+.SmallText{
+  width: 500px;
+  color: rgb(178, 162, 162);
+  padding: 20px;
+}
+.SmallText p{
+  
+  font-size: 30px;
+}
+.SmallText h3{
+  color: grey;
+  border-bottom: #ccc 1px solid;
+  padding-bottom: 20px;
+}
+.SmallImage{
+  width: 600px;
+}
+.SmallImage img{
+  width: 100%;
+}
+ 

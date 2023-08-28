@@ -1,0 +1,14 @@
+*{
+    padding: 0;
+    margin:0;
+    box-sizing: border-box;
+}
+body{
+    padding:0 50px ;
+}
+h1{
+    text-align: center;
+}
+table{
+    border-radius: 20px;
+}

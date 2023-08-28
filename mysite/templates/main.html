@@ -1,0 +1,152 @@
+{% extends 'base.html' %}
+
+{% block content %}  
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+ 
+  <link rel="stylesheet" href="static/css/main.css?v=7">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css"
+    integrity="sha512-z3gLpd7yknf1YoNbCzqRKc4qyor8gaKU1qmn+CShxbuBusANI9QpRohGBreCFkKxLhei6S9CQXFEbbKuqLg0DA=="
+    crossorigin="anonymous" referrerpolicy="no-referrer" />
+  <title>Document</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@700&family=Varela&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.css" />
+
+
+</head>
+
+<body> 
+  <div class="HomeBack">
+    
+
+
+    <div class="HomePage">
+      <div class="Text">
+        <p>Ensure the <span style="color: #084680;">Quality</span>,
+          Best Game Seller in the Town
+        </p>
+      </div>
+      <div class="image">
+        <img src="Media/images/robot.png" width="90%" alt="hello">
+      </div>
+    </div>
+  </div>
+
+
+
+  <div class="TotalMain">
+    <div class="ProductMain">
+      <div class="Products">
+        <p>Featured Products</p>
+        <hr class="underLine">
+      </div>
+      <br>
+      <div class="Child_Product">
+        <div class="MainChild">
+          <div class="Child"><img class="ProductImage" src="Media/images/product1.jpg" alt="">
+          </div>
+          <h6>Gaming Disks</h6>
+          <p class="ProductExplore">Explore the Collection</p>
+        </div>
+        <div class="MainChild">
+          <div class="Child"><img class="ProductImage" src="Media/images/product2.jpg" alt=""></div>
+          <h6>Gaming Disks</h6>
+          <p class="ProductExplore">Explore the Collection</p>
+        </div>
+        <div class="MainChild">
+          <div class="Child"><img class="ProductImage" src="Media/images/Product3.jpg" alt=""></div>
+          <h6>Gaming Disks</h6>
+          <p class="ProductExplore">Explore the Collection</p>
+        </div>
+        <div class="MainChild">
+          <div class="Child"><img class="ProductImage" src="Media/images/Product4.jpg" alt=""></div>
+          <h6>Gaming Disks</h6>
+          <p class="ProductExplore">Explore the Collection</p>
+        </div>
+        <div class="MainChild">
+          <div class="Child"><img class="ProductImage" src="Media/images/Product5.jpg" alt=""></div>
+          <h6>Gaming Disks</h6>
+          <p class="ProductExplore">Explore the Collection</p>
+        </div>
+        <div class="MainChild">
+          <div class="Child"><img class="ProductImage" src="Media/images/Product6.jpg" alt=""></div>
+          <h6>Gaming Disks</h6>
+          <p class="ProductExplore">Explore the Collection</p>
+        </div>
+
+      </div>
+    </div>
+    <div class="PopularMain">
+      <div class="MostPopular">
+        <p>Most Popular <span style="color: #2f8be2;">Games</span></p>
+        <hr class="underLine">
+      </div>
+      <div id="main">
+        <div class="swiper mySwiper">
+          <div class="swiper-wrapper">
+            
+            {% for a in Recent%}
+            <div class="swiper-slide">
+              <div class="product-card">
+                  <div class="product-tumb">
+                      <img src="{{ a.GPic.url }}" alt="Product Image">
+                  </div>
+                  <div class="product-details">
+                      <span class="product-catagory">{{ a.GCat.CatName }}</span>
+                      <h4><a href="#">{{ a.GName }}</a></h4>
+                      <p>{{ a.GDesc }}</p>
+                      <div class="product-bottom-details">
+                          <div class="product-price">Rs.{{ a.GPrice }}</div>
+                          <div class="product-links">
+                              <a href="#"><i class="fa fa-heart"></i></a>
+                              <a href="#"><i class="fa fa-shopping-cart"></i></a>
+                          </div>
+                      </div>
+                  </div>
+              </div>
+          </div>
+            {% endfor %}
+
+
+
+            
+
+
+
+
+          </div>
+          <div class="swiper-button-next"></div> <!-- Next button -->
+          <div class="swiper-button-prev"></div>
+
+
+        </div>
+      </div>
+
+
+
+    </div>
+  </div>
+  </div>
+  <marquee class="sliding" direction="right">THE BEST GAME SELLER IN THE CITY THE BEST GAME SELLER IN THE CITY</marquee>
+
+<div class="SmallAbout">
+  <div class="SmallImage">
+    <img src="Media/images/SmallAbout.jpeg" alt="">
+  </div>
+  <div class="SmallText">
+    <h3>Who are we ?</h3>
+    
+    <br><br>
+    <p>Renowned for our unparalleled selection, unbeatable deals, and exceptional customer service, we stand as the premier choice for all gaming enthusiasts, ensuring unforgettable experiences for every player.</p>
+  </div>
+</div>
+</body>
+
+<script src="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.js"></script>
+<script src="static/js/main.js"></script>
+
+{% endblock %}

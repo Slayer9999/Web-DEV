@@ -1,0 +1,49 @@
+ {% extends 'base.html' %}
+
+{% block content %}  
+<head>
+	<link rel="stylesheet" href="/static/css/Product.css?v=5">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css"
+    integrity="sha512-z3gLpd7yknf1YoNbCzqRKc4qyor8gaKU1qmn+CShxbuBusANI9QpRohGBreCFkKxLhei6S9CQXFEbbKuqLg0DA=="
+    crossorigin="anonymous" referrerpolicy="no-referrer" />
+</head>
+
+<body>
+	<header class="product-header">
+		<div class="header-content">
+		  <h1>Welcome to Our Product Showcase</h1>
+		  <p>Discover our latest and greatest products that cater to your needs.</p>
+		</div>
+	  </header>
+  <div class="Flex">
+    {% for a in game_records %}
+	<div class="product-card">
+		<div class="product-card">
+		
+			<div class="product-tumb">
+			  <img src="{{ a.GPic.url }}" alt="Product Image">
+			</div>
+			<div class="product-details">
+			  <span class="product-catagory">{{a.GCat.CatName}}</span>
+			  <h4><a href="#">{{a.GName}}</a></h4>
+			  <p>{{a.GDesc}}</p>
+			  <div class="product-bottom-details">
+				<div class="product-price">Rs.{{a.GPrice}}</div>
+				<div class="product-links">
+				  <a href="#"><i class="fa fa-heart"></i></a>
+				  <a class="cart-link"   data-cart-url="{% url 'Cart' %}" data-id="{{ a.id }}"><i class="fa fa-shopping-cart"></i></a>
+				</div>
+			  </div>
+			</div>
+		  </div>
+		  
+    </div>
+	{% endfor %}
+  </div>
+</body>
+<script>
+    var csrftoken = '{{ csrf_token }}';
+</script>
+<script src="/static/js/jquery-3.6.3.min.js"></script>
+<script src="/static/js/Product.js"></script>
+{% endblock %}

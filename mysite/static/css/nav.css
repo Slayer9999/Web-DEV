@@ -1,52 +1,52 @@
 #nav {
-    position: fixed;
-    width: 100%;
-    top: 0;
-    z-index: 100;
-    transition: 0.5s all;
+    position: fixed !important;
+    width: 100% !important;
+    top: 0 !important;
+    z-index: 100 !important;
+    transition: 0.5s all !important;
     
   
   }
   .navcolor{
-    background-color: rgba(0.8,0.8,0.5,0.8);
+    background-color: rgba(0.8,0.8,0.5,0.8) !important;
   }
   
   #navContent {
   
   
     
-    padding: 30px;
-    display: flex;
-    width: 90%;
-    margin: auto;
-    font-family: 'Varela';
+    padding: 30px !important;
+    display: flex !important;
+    width: 90% !important;
+    margin: auto !important;
+    font-family: 'Varela' !important;
   
   
   }
   
   .navIcons {
     width: 40% !important;
-    margin-left: 70px;
-    display: flex;
-    align-items: center;
-    justify-content: space-evenly;
+    margin-left: 70px !important;
+    display: flex !important;
+    align-items: center !important;
+    justify-content: space-evenly !important;
   
   
   
   
   }
   a{
-    color: #edf5e1;
-    text-decoration: none;
+    color: #edf5e1  !important;
+    text-decoration: none !important;
   }
   .ChildNavIcon {
-    text-decoration: none;
-    position: relative;
-    cursor: pointer;
-    font-size: 17px;
-    font-weight: 500;
-    color: #edf5e1;
-    transition: 0.5s all;
+    text-decoration: none !important;
+    position: relative !important;
+    cursor: pointer !important;
+    font-size: 17px !important;
+    font-weight: 500 !important;
+    color: #edf5e1 !important;
+    transition: 0.5s all !important;
   
   
   }
@@ -68,29 +68,29 @@
   }
   
   .LoginAndCart {
-    margin-left: auto;
-    display: flex;
-    justify-content: space-between;
-    width: 170px;
+    margin-left: auto !important;
+    display: flex !important;
+    justify-content: space-between !important;
+    width: 170px !important;
   }
   .shopping{
-    font-size: 20px;
+    font-size: 20px !important;
   }
   .icon {
-    color: #053868;
+    color: #053868 !important;
     font-size: 30px !important;
-    position: relative;
+    position: relative !important;
   }
   
   .Badge {
-    position: absolute;
-    top: -8px;
-    right: -8px;
-    background-color: #edf5e1;
-    color: #053868;
-    border-radius: 50%;
-    padding: 2px 6px;
-    font-size: 12px;
+    position: absolute !important;
+    top: -8px !important;
+    right: -8px !important;
+    background-color: #edf5e1 !important;
+    color: #053868 !important;
+    border-radius: 50% !important;
+    padding: 2px 6px !important;
+    font-size: 12px !important;
   }
   
   .btn {
@@ -122,53 +122,55 @@
   
   /* Dropdown Categories*/
   .Cat {
-    position: relative;
+    position: relative !important;
   }
   
   .Drop {
-    transform: scale(0);
-    position: absolute;
-    top: 100%;
-    left: 0;
-    background-color: #053868;
-    color: #edf5e1;
-    width: 150px;
+    transform: scale(0) !important;
+    position: absolute !important;
+    top: 100% !important;
+    left: 0 !important;
+    background-color: #053868 !important;
+    color: #edf5e1 !important;
+    width: 150px !important;
   
-    font-family: 'Varela';
-    cursor: default;
-    transition: 0.3s all;
-    text-align: center;
+    font-family: 'Varela' !important;
+    cursor: default !important;
+    transition: 0.3s all !important;
+    text-align: center !important;
   }
   
   .Cat:hover .Drop {
-    transform: scale(1);
+    transform: scale(1) !important;
   
   }
   
   .Drop ul {
-    list-style: none;
-    padding: 0;
-    margin: 0;
+    list-style: none !important;
+    padding: 0 !important;
+    height: auto;
+    margin: 0 !important;
   
   }
   
   .Drop li {
-  
-    height: 50px;
-    padding-top: 12px;
-    position: relative;
-    cursor: pointer;
-    width: auto;
-    display: flex;
-    justify-content: center;
-    transition: 0.5s all;
+    
+    height: 50px !important;
+    padding-top: 12px !important;
+    position: relative !important;
+    cursor: pointer !important;
+    width: auto !important;
+    display: flex !important;
+    justify-content: center !important;
+    transition: 0.5s all !important;
   
   }
   
   .Drop hr {
-    height: 0.5px;
-    background-color: grey;
-    border: none;
+    height: 0.5px !important;
+    background-color: grey !important;
+    border: none !important;
+    margin-top: 0px;
   
   }
   
@@ -186,6 +188,6 @@
 
   height: 2px;
   background-color: #edf5e1;
-  width:100%
+  width:100% ;
 }
 

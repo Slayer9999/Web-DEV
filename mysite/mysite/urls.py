@@ -30,6 +30,9 @@ urlpatterns = [
     path('update',views.update,name='update'),
     path('Save',views.SaveCat,name='SaveCat'),
     path('Cart',views.Cart,name='Cart'),
+    path('CartMinus',views.CartMinus,name='CartMinus'),
+    path('ca',views.CartPage,name="CARTPAGE")
+  
 ]
 
 if settings.DEBUG:

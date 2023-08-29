@@ -5,18 +5,30 @@ from Gaming.models import Game
 from Gaming.models import NewC
 from django.shortcuts import get_object_or_404
 from django.urls import reverse
+from Gaming.models import Big
 
 from django.views.decorators.csrf import csrf_exempt
 
+global new_total
+new_total=0
+
 def Home(request):
+    global new_total
+    
     try:
+         
+         
          Da_ta=NewC.objects.all()
          GameDa_ta=Game.objects.all()
+         Bi_g=Big.objects.last()
+         Initial_Value=Bi_g.Total
          recent_records = Game.objects.all().order_by('-id')[:10]
+         
+         
 
     except:
        pass
-    return render(request, 'main.html',{'Data':Da_ta,'GameDa_ta':GameDa_ta,'Recent':recent_records})
+    return render(request, 'main.html',{'Data':Da_ta,'GameDa_ta':GameDa_ta,'Recent':recent_records,'Initial_Value':Initial_Value,})
 def AdminHome(request):
     try:
          Da_ta=NewC.objects.all()
@@ -108,23 +120,67 @@ def SaveCat(request):
         return JsonResponse({'status': 'error', 'message': 'Invalid request method.'})
 def category_view(request, category_id):
     # Filter Game records with matching category_id
+   
+   try:
+        
     game_records = Game.objects.filter(GCat_id=category_id)
     Da_ta=NewC.objects.all()
+    Bi_g=Big.objects.last()
+    Initial_Value=Bi_g.Total
     
     context = {
         'game_records': game_records,
         'Data':Da_ta,
+        'Total':Bi_g,
+        'Initial_Value':Initial_Value
+
+        
     }
+   except:
+      pass
     
-    return render(request, 'Product.html', context)
+   return render(request, 'Product.html', context)
 
 def Cart(request):
+    
     gameId = request.POST.get('id')
+    new_total=request.POST.get('X')
+    new_total=int(new_total)
         
     if gameId:
             try:
                 game_instance = Game.objects.get(pk=gameId)
                 game_instance.ShoppingC += 1
+                new_total=new_total+1
+                new = Big.objects.last()
+                new.Total+=1
+                new.save()
+
+               
+                game_instance.save()
+                return JsonResponse({'message': 'Item added to cart.'})
+            except Game.DoesNotExist:
+                return JsonResponse({'message': 'Game not found.'}, status=404)
+    else:
+            return JsonResponse({'message': 'Invalid request.'}, status=400)
+def CartMinus(request):
+    
+    gameId = request.POST.get('id')
+    new_total=request.POST.get('X')
+    new_total=int(new_total)
+        
+    if gameId:
+            try:
+                game_instance = Game.objects.get(pk=gameId)
+                if game_instance.ShoppingC>0:
+                    game_instance.ShoppingC -= 1
+                new_total=new_total-1
+                new = Big.objects.last()
+                if(new.Total>0):
+                    new.Total-=1
+                new.save()
+
+               
                 game_instance.save()
                 return JsonResponse({'message': 'Item added to cart.'})
             except Game.DoesNotExist:
@@ -134,6 +190,17 @@ def Cart(request):
 
 
 
-
-
-
+def CartPage(request):
+        try:
+         Shopping = Game.objects.filter(ShoppingC__gt=0)
+         total_cost = []
+         for cost in Shopping:
+            total = cost.ShoppingC * cost.GPrice
+            total_cost.append((cost, total))
+         Bi_g=Big.objects.last()
+         Initial_Value=Bi_g.Total
+         Da_ta=NewC.objects.all()
+        except:
+         pass
+        
+        return render(request,'cart.html',{'total_cost':total_cost,'Initial_Value':Initial_Value,'Data':Da_ta}) 

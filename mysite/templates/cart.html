@@ -1,0 +1,45 @@
+{% extends 'base.html' %}
+
+{% block content %} 
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="static/css/cart.css?v=12">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.1.3/dist/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
+</head>
+<body>
+    <div class="ProductModal" id="MyModal">
+        <table class="table table-striped">
+         
+          <tbody>
+            {% for S, total_cost in total_cost %}
+            <tr data-product-id="{{ S.id }}">
+                <td>{{ S.GName }}</td>
+                <td>{{ S.GPrice }}</td>
+                <td><img src="{{ S.GPic.url }}" width="200px" alt=""></td>
+                <td>
+                    <button class="increase-quantity"  data-id="{{S.id}}" data-url="{% url 'Cart' %}"><i class="fa-solid fa-plus"></i></button> <input type="text"  class="product-quantity" style="width: 40px; text-align: center;" value="{{ S.ShoppingC }}" readonly> <button data-id="{{S.id}}" data-url="{% url 'CartMinus' %}" class="decrease-quantity"><i class="fa-solid fa-minus"></i></button>
+                </td>
+                <td>
+                    <input type="text" class="total-cost" value="{{ total_cost }}" style="width: 100px; text-align: center;" readonly>
+                </td>
+            </tr>
+            {% endfor %}
+            
+          </tbody>
+        </table>
+        </div>
+</body>
+<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/popper.js@1.14.3/dist/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@4.1.3/dist/js/bootstrap.min.js" integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy" crossorigin="anonymous"></script>
+<script src="/static/js/jquery-3.6.3.min.js"></script>
+<script>
+    var csrftoken = '{{ csrf_token }}';
+	var x = {{ Initial_Value|default:0 }};
+
+</script>
+<script src="/static/js/cart.js"></script>
+</html>
+{% endblock %}

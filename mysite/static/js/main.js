@@ -71,5 +71,41 @@ swiperContainer.addEventListener("mouseleave", function () {
 
 
 //Slider Cards
+$('.cart-link').click(function(event) {
+  event.preventDefault()
+  
+  var cartUrl = $(this).data('cart-url');
+  var gameId = $(this).data('id');
+  
+x+=1;
+
+  
+  
+
+  let productElement = document.querySelector('.Badge');
+  productElement.innerText = x;
+  $.ajax({
+      url: cartUrl,
+      method: 'POST',
+      data: {'id': gameId,'X':x},
+      dataType: 'json',
+      beforeSend: function(xhr) {
+          xhr.setRequestHeader('X-CSRFToken', csrftoken);
+      },
+      success: function(response) {
+          console.log("Helllo");
+          
+         
+          console.log("Hello")
+         
+
+         
+      },
+      error: function(xhr, status, error) {
+          console.error('Request failed with status:', status);
+      }
+  });
+  
+});
 
 

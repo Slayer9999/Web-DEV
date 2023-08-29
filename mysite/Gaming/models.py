@@ -16,5 +16,7 @@ class Game(models.Model):
     GPic = models.ImageField(upload_to='images')
     GDate = models.DateTimeField(auto_now_add=True)
     ShoppingC=models.IntegerField(default=0)
+class  Big(models.Model):
+    Total=models.IntegerField()
 
    
